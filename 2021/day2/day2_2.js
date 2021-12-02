@@ -1,15 +1,13 @@
 let fs = require("fs");
 
 const day2task2 = () => {
-	let nums = fs.readFileSync("day2/data.txt", "utf8")
+	let nums = fs.readFileSync("2021/day2/data.txt", "utf8")
 	.split("\n")
 	.map(item=> item.split(' '))
 
 	 const reducer = (previousValue, currentValue) => {
-		let  {aim, forward } = previousValue;
-		let direction = currentValue[0];
-
-		switch(direction){
+		let { aim, forward } = previousValue;
+		switch(currentValue[0]){
 			case 'forward':
 				return {
 					...previousValue,
@@ -31,13 +29,8 @@ const day2task2 = () => {
 		}
 	 }
 
-  let location = nums.reduce(reducer,{forward:0,down:0,aim:0})
-
-	console.log('result', location.forward  * location.down )
-
-	//return (down + up) * forward  //  1746616
-	// result 1741971043
-
+  let location = nums.reduce(reducer,{ forward:0, down:0, aim:0})
+	console.log("2 day 2 task \n result", location.forward  * location.down);
 };
 
 module.exports = day2task2;

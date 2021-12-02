@@ -1,10 +1,8 @@
 let fs = require("fs");
-const day1task2 = (message, currentFile) => {
-	let nums = fs.readFileSync("day1/data.txt", "utf8").split("\n").map(n=>parseInt(n,10));
+const day1task2 = () => {
+	let nums = fs.readFileSync("2021/day1/data.txt", "utf8").split("\n").map(n=>parseInt(n,10));
 	let result = 0;
 	let arr = [];
-	console.log("nums", nums);
-	console.log("nums", nums[10]);
 
 	nums.forEach((item, index) => {
 		let arrIndex = index - 2;
@@ -19,7 +17,6 @@ const day1task2 = (message, currentFile) => {
 		}
 		}
 	});
-	console.log("1 day 2 task \n arr", arr);
 	console.log("1 day 2 task \n result", result);
 };
 module.exports = day1task2;
