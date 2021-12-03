@@ -9,3 +9,7 @@ day2task1();
 day2task2();
 
 
+ let day3task1 = require("./2021/day3/day3_1");
+ let day3task2 = require("./2021/day3/day3_2");
+  day3task1();
+  day3task2();

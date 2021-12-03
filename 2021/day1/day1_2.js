@@ -7,14 +7,14 @@ const day1task2 = () => {
 	nums.forEach((item, index) => {
 		let arrIndex = index - 2;
 		if (arrIndex >= 0 && arrIndex < nums.length-3) {
-		var deep = {
-			index: arrIndex ,
-			sum: item + nums[index - 1] + nums[index - 2]
-		};
-		arr.push(deep);
-		if ( arr[arrIndex-1] && arr[arrIndex].sum - arr[arrIndex-1].sum > 0 ) {
-			result++;
-		}
+			const deep = {
+				index: arrIndex ,
+				sum: item + nums[index - 1] + nums[index - 2]
+			};
+			arr.push(deep);
+			if ( arr[arrIndex-1] && arr[arrIndex].sum - arr[arrIndex-1].sum > 0 ) {
+				result++;
+			}
 		}
 	});
 	console.log("1 day 2 task \n result", result);
