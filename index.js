@@ -1,2 +1,2 @@
-let task = require("./2024/day1/day1_2");
+let task = require("./2024//day3/task_2");
 task();
