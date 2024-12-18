@@ -15,19 +15,20 @@ const day1task1 = () => {
 			    number: Math.abs(num - lines[index + 1])
 			});
 		})
+		console.log('====================');
+		console.log(operation);
+		console.log('line', item);
 
-		 console.log('line', item);
-		 console.log('operation', operation);
-         let notValidArrLine=  operation.filter( (i)=> i.vector ==="up" && i.vector ==="down"  ||
-			 i.vector ==="middle" ||  i.number > 3 || i.number <= 0
-		 )
+		 let findUp = operation.filter( (i) => ( i.vector === "up"));
+		 let findDown = operation.filter( (i) => ( i.vector === "down"));
+         let notValidArrLine=  operation.filter( (i) => i.vector ==="middle" ||  i.number > 3);
+
 		 console.log('notValidArrLine',  notValidArrLine)
+		 console.log('up down',  findUp.length, findDown.length )
 
-
-
-		 if(!operation.filter( (i)=> i.vector === "up" && i.vector ==="down"  ||
-			 i.vector ==="middle" ||  i.number > 3
-		 ).length){
+		 if( notValidArrLine.length === 0 && !(findUp.length && findDown.length) ) {
+			 console.log('==== LINE VALID ==========');
+			 console.log('====================');
 			count++
 		 }
 	});
